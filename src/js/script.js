@@ -23,5 +23,8 @@ checkbox.addEventListener('click', function (){
     btnTema.classList.toggle('light-theme');
     var bodyTema = document.querySelector('body');
     bodyTema.classList.toggle('light-theme');
-    
+    var cartaoTema = document.querySelector('.cartao');
+    cartaoTema.classList.toggle('light-theme');
+    var informacoesTema = document.querySelector('.minhas-informacoes');
+    informacoesTema.classList.toggle('light-theme');
 })
