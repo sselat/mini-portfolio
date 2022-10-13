@@ -1,3 +1,47 @@
+#labelCheckbox {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#labelCheckbox span{
+    display: inline-block;
+    background: #070b12;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    border: 1px solid #e228d8;
+    transition: background .3s ease-in-out;
+}
+
+#labelCheckbox span::before {
+    content: '';
+    display: block;
+    background: #ff00f2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 4px 5px;
+    transition: .1s ease-in-out;
+}
+
+#labelCheckbox span.light-theme::before{
+    background: rgb(129, 93, 0);
+}
+
+#labelCheckbox span.light-theme {
+    background: wheat;
+    border-color: rgb(128, 91, 0);
+}
+
+#labelCheckbox #checkbox{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+#labelCheckbox #checkbox:checked+span::before{
+    transform: translateX(29px);
+}
 body{
     background-image: url(../imagens/fundo-site.jpg);
     background-size: cover;
@@ -14,7 +58,12 @@ body{
 
     min-height: 100vh;
     padding: 30px;
+    transition: background 1s ease-in-out;
+}
 
+body.light-theme {
+    background-image: url(../imagens/fundo-site-light.jpg);
+    background-position: left;
 }
 
 .cartao {
@@ -157,3 +206,4 @@ body{
 *::-webkit-scrollbar-track{
     background: #070d12;
 }
+

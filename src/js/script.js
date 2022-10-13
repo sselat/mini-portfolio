@@ -15,3 +15,13 @@ btnRedes.addEventListener('click', function(){
     btnSobre.classList.remove('selecionado');
     btnRedes.classList.add('selecionado');
 });
+
+var checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('click', function (){
+    var btnTema = document.querySelector('#labelCheckbox span');
+    btnTema.classList.toggle('light-theme');
+    var bodyTema = document.querySelector('body');
+    bodyTema.classList.toggle('light-theme');
+    
+})
